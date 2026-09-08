@@ -4,94 +4,115 @@ Local-first dashboard and tracker for **Capital Rift** empire metrics: net worth
 
 Nothing is uploaded. Data stays on your machine. Requests go only to `play.capitalrift.com`.
 
-**Live demo (GitHub Pages):**  
-https://iornman1213.github.io/CapitalRiftLedger/
+**Live demo:** https://iornman1213.github.io/CapitalRiftLedger/
 
 ---
 
 ## Features
 
-- **Wealth over time** — net worth, liquid, cash vs bank (stacked)
-- **Income** — daily income bars + rent vs ops vs wages (stacked or per-minute lines)
-- **Network health** — coverage % and out-of-stock lanes
-- **Footprint** — shops & land growth
-- **Inventory, workforce roles, top shops, fleet breakdown**
-- **Day-over-day alerts** (coverage drops, income/net-worth crashes, workforce shrinkage)
-- **Daily / Hourly** toggle when you collect hourly history
-- **CSV export** of the time series
-- Works offline once history is loaded (drag-and-drop JSON or local server)
+- Wealth over time (net / liquid / cash vs bank)
+- Income charts (daily stacked rent vs ops, per-minute lines)
+- Network health (coverage % + out-of-stock)
+- Footprint (shops & land)
+- Inventory, workforce roles, top shops, fleet, bank
+- Day-over-day alerts
+- Daily / Hourly toggle
+- CSV export
+- Windows one-click setup, track, schedule, startup
 
-## Quick start (local)
+## Option A — Windows portable pack
 
-### Option A — Windows portable pack
-Use the full Windows zip (includes Node runtime + helper `.cmd` scripts).
+The `windows/` folder matches the portable package layout (without the bundled `node.exe`, which is ~85MB).
 
-1. Run `1-Setup.cmd` → paste player UUID + session Cookie  
-2. Run `2-Track-Today.cmd`  
-3. Run `3-Open-Dashboard.cmd`
+### If you have the full zip (with `runtime\\node.exe`)
 
-### Option B — Any machine with Node.js 18+
+1. Unzip anywhere  
+2. Double-click **`1-Setup.cmd`** → paste player UUID + session Cookie  
+3. **`2-Track-Today.cmd`** → pull live stats  
+4. **`3-Open-Dashboard.cmd`** → open charts (leave window open)
+
+Also available:
+
+| Script | What it does |
+|--------|----------------|
+| `CapitalRiftLedger.cmd` / `Launch.cmd` | Track + open dashboard in one step |
+| `Add-to-Startup.cmd` | Track on Windows login |
+| `Remove-from-Startup.cmd` | Undo startup |
+| `Schedule-Daily-Track.cmd` | Task Scheduler daily track |
+| `Unschedule-Daily-Track.cmd` | Remove daily task |
+| `Schedule-Hourly-Track.cmd` | Hourly history (ops detail) |
+| `Unschedule-Hourly-Track.cmd` | Remove hourly task |
+| `Track-Silent.cmd` | Track with no pause (for tasks) |
+| `Track-Silent-Hourly.cmd` | Hourly silent track |
+| `Create-Desktop-Shortcuts.vbs` | Desktop shortcuts |
+
+Data lives in `%APPDATA%\\CapitalRiftLedger\\` (config, history, logs).
+
+### Using this repo’s `windows/` folder without the big zip
+
+1. Install [Node.js](https://nodejs.org/) 18+ **or** put a portable `node.exe` in `windows/runtime/`  
+2. From `windows/`, run the same `.cmd` scripts (they call `runtime\\node.exe` and `app\\cli.cjs`)  
+3. Or from the repo root with system Node:
+
+```bat
+node cli.cjs setup
+node cli.cjs track
+node cli.cjs open
+```
+
+Full original README for the pack: [`windows/README.txt`](windows/README.txt).
+
+## Option B — Any OS with Node.js 18+
 
 ```bash
-# 1. Copy config
 cp config.example.json config.json
-# Edit config.json → put your player UUID and Cookie
+# Edit playerId + Cookie
 
-# 2. Track once
-node track-growth.mjs
-# Optional hourly:
-node track-growth.mjs --hourly
+node track-growth.mjs              # daily point
+node track-growth.mjs --hourly     # hourly point
 
-# 3. Open the dashboard
-# Serve the folder (needed for auto-load of JSON):
+# Serve folder so the dashboard can fetch JSON:
 npx --yes serve .
-# or:  python3 -m http.server 8765
-# Then open http://localhost:3000 (or :8765)/dashboard.html
+# open http://localhost:3000/dashboard.html
 ```
 
-You can also open `dashboard.html` directly and **drop** your `growth-history.json` onto the page.
+You can also open `dashboard.html` and **drop** `growth-history.json` onto the page.
 
-## Config
+### Cookie
 
-`config.example.json`:
+Browser → F12 → Network → any `play.capitalrift.com` request → Headers → Cookie.  
+When track returns 401/403, refresh the cookie and run setup again.
 
-```json
-{
-  "playerUuid": "YOUR-PLAYER-UUID",
-  "cookie": "session=...; other=..."
-}
+## Repo layout
+
+```
+├── dashboard.html / index.html   # UI (GitHub Pages)
+├── dashboard.js                  # Chart logic
+├── growth-history.demo.json      # Demo for Pages
+├── config.example.json
+├── track-growth.mjs              # Cross-platform tracker
+├── cli.cjs                       # setup | track | open | …
+└── windows/                      # Portable Windows scripts + app/
+    ├── 1-Setup.cmd …
+    ├── app/cli.cjs
+    ├── app/track-growth.mjs
+    └── runtime/README.txt        # node.exe not in git (~85MB)
 ```
 
-Cookie: browser → F12 → Network → any `play.capitalrift.com` request → Headers → Cookie.
-
-When the cookie expires (401/403), refresh it and run setup/track again.
-
-## Files
-
-| File | Purpose |
-|------|---------|
-| `dashboard.html` / `index.html` | Charts + KPIs (GitHub Pages serves `index.html`) |
-| `track-growth.mjs` | Pulls `/api/game` snapshot and appends to history |
-| `cli.cjs` | Small CLI helper used by Windows scripts |
-| `growth-history.demo.json` | Sample data so the Pages demo works |
-| `config.example.json` | Template for credentials |
-
-History files (`growth-history.json`, `growth-history-hourly.json`) are **gitignored** so your empire numbers stay private.
+History files and `config.json` are **gitignored** so your numbers stay private.
 
 ## GitHub Pages
 
-This repo is set up for Pages from the `main` branch root. After enabling Pages in repo settings:
+Settings → Pages → Deploy from branch **main** / **root**.
 
-`https://<you>.github.io/CapitalRiftLedger/`
-
-The demo loads `growth-history.demo.json` automatically. Drop your own JSON or run the tracker locally for real data.
+Demo URL: `https://<you>.github.io/CapitalRiftLedger/`
 
 ## Privacy
 
-- Credentials live only in local `config.json` (never committed).
-- Dashboard reads JSON in the browser; no backend of ours.
-- Tracker talks only to the official game API.
+- Credentials only in local `config.json` / `%APPDATA%`
+- Dashboard never uploads data
+- Tracker only talks to the official game API
 
 ## License
 
-MIT — use, fork, and adapt freely.
+MIT
