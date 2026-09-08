@@ -1,0 +1,7 @@
+{
+  "url": "https://play.capitalrift.com/api/game/{playerId}",
+  "playerId": "YOUR-PLAYER-UUID-HERE",
+  "headers": {
+    "Cookie": "_capitalrift_oauth2=PASTE_FRESH_COOKIE_HERE"
+  }
+}
