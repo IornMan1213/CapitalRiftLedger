@@ -1,0 +1,22 @@
+# Private / local-only
+config.json
+raw-latest.json
+api-fetch.log
+launch.log
+startup-track.log
+*.log
+
+# Local history (keep yours private; demo stays public)
+growth-history.json
+growth-history-hourly.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node (if you npm install later)
+node_modules/
+package-lock.json
