@@ -1,31 +1,16 @@
 [
-  {
-    "source": "game_api",
-    "date": "2026-08-25",
-    "fetched_at": "2026-08-25T18:00:00.000Z",
-    "game_day": 452,
-    "city": {
-      "name": "My City",
-      "lon": -122.3314,
-      "lat": 47.606
-    },
-    "city_name": "My City",
-    "run": 1,
-    "net_worth": 142100000,
-    "cash": 6200000,
-    "bank_total": 18500000,
-    "liquid_cash": 24700000,
-    "income_24h": 1850000,
-    "shop_count": 4,
-    "land_count": 1200,
-    "loyalty_points": 210,
-    "worker_count": 420,
-    "vehicle_count": 85,
-    "network_coverage": 0.72,
-    "network_out_of_stock": 3,
-    "income_rent_income_per_min": 850,
-    "income_gross_per_min": 420,
-    "income_wage_per_min": 180,
-    "income_net_per_min": 1090
-  }
+  {"source":"game_api","date":"2026-08-25","fetched_at":"2026-08-25T18:00:00.000Z","game_day":452,"city_name":"My City","run":1,"net_worth":142100000,"cash":6200000,"bank_total":18500000,"liquid_cash":24700000,"income_24h":1850000,"shop_count":4,"land_count":1200,"loyalty_points":210,"worker_count":420,"vehicle_count":85,"network_coverage":0.72,"network_out_of_stock":3,"income_rent_income_per_min":850,"income_gross_per_min":420,"income_wage_per_min":180,"income_net_per_min":1090},
+  {"source":"game_api","date":"2026-08-26","fetched_at":"2026-08-26T18:00:00.000Z","game_day":453,"city_name":"My City","run":1,"net_worth":158200000,"cash":7100000,"bank_total":20100000,"liquid_cash":27200000,"income_24h":2100000,"shop_count":5,"land_count":1450,"loyalty_points":225,"worker_count":460,"vehicle_count":92,"network_coverage":0.74,"network_out_of_stock":2,"income_rent_income_per_min":920,"income_gross_per_min":480,"income_wage_per_min":195,"income_net_per_min":1205},
+  {"source":"game_api","date":"2026-08-27","fetched_at":"2026-08-27T18:00:00.000Z","game_day":454,"city_name":"My City","run":1,"net_worth":175500000,"cash":8000000,"bank_total":22000000,"liquid_cash":30000000,"income_24h":2350000,"shop_count":5,"land_count":1680,"loyalty_points":240,"worker_count":510,"vehicle_count":98,"network_coverage":0.71,"network_out_of_stock":5,"income_rent_income_per_min":980,"income_gross_per_min":510,"income_wage_per_min":210,"income_net_per_min":1280},
+  {"source":"game_api","date":"2026-08-28","fetched_at":"2026-08-28T18:00:00.000Z","game_day":455,"city_name":"My City","run":1,"net_worth":198000000,"cash":9200000,"bank_total":24500000,"liquid_cash":33700000,"income_24h":2600000,"shop_count":6,"land_count":1920,"loyalty_points":255,"worker_count":560,"vehicle_count":105,"network_coverage":0.76,"network_out_of_stock":2,"income_rent_income_per_min":1050,"income_gross_per_min":560,"income_wage_per_min":220,"income_net_per_min":1390},
+  {"source":"game_api","date":"2026-08-29","fetched_at":"2026-08-29T18:00:00.000Z","game_day":456,"city_name":"My City","run":1,"net_worth":225000000,"cash":10500000,"bank_total":28000000,"liquid_cash":38500000,"income_24h":2900000,"shop_count":7,"land_count":2200,"loyalty_points":270,"worker_count":620,"vehicle_count":115,"network_coverage":0.78,"network_out_of_stock":1,"income_rent_income_per_min":1150,"income_gross_per_min":620,"income_wage_per_min":240,"income_net_per_min":1530},
+  {"source":"game_api","date":"2026-08-30","fetched_at":"2026-08-30T18:00:00.000Z","game_day":457,"city_name":"My City","run":1,"net_worth":258000000,"cash":12000000,"bank_total":32000000,"liquid_cash":44000000,"income_24h":3200000,"shop_count":8,"land_count":2500,"loyalty_points":290,"worker_count":680,"vehicle_count":125,"network_coverage":0.79,"network_out_of_stock":2,"income_rent_income_per_min":1250,"income_gross_per_min":680,"income_wage_per_min":255,"income_net_per_min":1675},
+  {"source":"game_api","date":"2026-08-31","fetched_at":"2026-08-31T18:00:00.000Z","game_day":458,"city_name":"My City","run":1,"net_worth":295000000,"cash":14000000,"bank_total":36000000,"liquid_cash":50000000,"income_24h":3600000,"shop_count":8,"land_count":2850,"loyalty_points":310,"worker_count":740,"vehicle_count":135,"network_coverage":0.77,"network_out_of_stock":4,"income_rent_income_per_min":1380,"income_gross_per_min":740,"income_wage_per_min":270,"income_net_per_min":1850},
+  {"source":"game_api","date":"2026-09-01","fetched_at":"2026-09-01T18:00:00.000Z","game_day":459,"city_name":"My City","run":1,"net_worth":340000000,"cash":16500000,"bank_total":41000000,"liquid_cash":57500000,"income_24h":4000000,"shop_count":9,"land_count":3200,"loyalty_points":330,"worker_count":800,"vehicle_count":148,"network_coverage":0.80,"network_out_of_stock":2,"income_rent_income_per_min":1500,"income_gross_per_min":820,"income_wage_per_min":290,"income_net_per_min":2030},
+  {"source":"game_api","date":"2026-09-02","fetched_at":"2026-09-02T18:00:00.000Z","game_day":460,"city_name":"My City","run":1,"net_worth":390000000,"cash":19000000,"bank_total":47000000,"liquid_cash":66000000,"income_24h":4500000,"shop_count":10,"land_count":3600,"loyalty_points":350,"worker_count":860,"vehicle_count":160,"network_coverage":0.81,"network_out_of_stock":1,"income_rent_income_per_min":1650,"income_gross_per_min":900,"income_wage_per_min":310,"income_net_per_min":2240},
+  {"source":"game_api","date":"2026-09-03","fetched_at":"2026-09-03T18:00:00.000Z","game_day":461,"city_name":"My City","run":1,"net_worth":450000000,"cash":22000000,"bank_total":54000000,"liquid_cash":76000000,"income_24h":5100000,"shop_count":10,"land_count":4100,"loyalty_points":370,"worker_count":920,"vehicle_count":172,"network_coverage":0.82,"network_out_of_stock":2,"income_rent_income_per_min":1800,"income_gross_per_min":980,"income_wage_per_min":330,"income_net_per_min":2450},
+  {"source":"game_api","date":"2026-09-04","fetched_at":"2026-09-04T18:00:00.000Z","game_day":462,"city_name":"My City","run":1,"net_worth":520000000,"cash":25000000,"bank_total":62000000,"liquid_cash":87000000,"income_24h":5800000,"shop_count":11,"land_count":4600,"loyalty_points":390,"worker_count":980,"vehicle_count":185,"network_coverage":0.80,"network_out_of_stock":3,"income_rent_income_per_min":1980,"income_gross_per_min":1050,"income_wage_per_min":350,"income_net_per_min":2680},
+  {"source":"game_api","date":"2026-09-05","fetched_at":"2026-09-05T18:00:00.000Z","game_day":463,"city_name":"My City","run":1,"net_worth":590000000,"cash":28000000,"bank_total":70000000,"liquid_cash":98000000,"income_24h":6400000,"shop_count":12,"land_count":5100,"loyalty_points":410,"worker_count":1040,"vehicle_count":198,"network_coverage":0.83,"network_out_of_stock":1,"income_rent_income_per_min":2150,"income_gross_per_min":1120,"income_wage_per_min":370,"income_net_per_min":2900},
+  {"source":"game_api","date":"2026-09-06","fetched_at":"2026-09-06T18:00:00.000Z","game_day":464,"city_name":"My City","run":1,"net_worth":670000000,"cash":32000000,"bank_total":79000000,"liquid_cash":111000000,"income_24h":7100000,"shop_count":12,"land_count":5600,"loyalty_points":430,"worker_count":1100,"vehicle_count":210,"network_coverage":0.84,"network_out_of_stock":2,"income_rent_income_per_min":2350,"income_gross_per_min":1200,"income_wage_per_min":390,"income_net_per_min":3160},
+  {"source":"game_api","date":"2026-09-07","fetched_at":"2026-09-07T18:00:00.000Z","game_day":465,"city_name":"My City","run":1,"net_worth":760000000,"cash":36000000,"bank_total":89000000,"liquid_cash":125000000,"income_24h":7900000,"shop_count":13,"land_count":6200,"loyalty_points":450,"worker_count":1160,"vehicle_count":225,"network_coverage":0.85,"network_out_of_stock":1,"income_rent_income_per_min":2550,"income_gross_per_min":1280,"income_wage_per_min":410,"income_net_per_min":3420}
 ]
