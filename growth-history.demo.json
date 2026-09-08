@@ -1,1 +1,31 @@
-PLACEHOLDER
+[
+  {
+    "source": "game_api",
+    "date": "2026-08-25",
+    "fetched_at": "2026-08-25T18:00:00.000Z",
+    "game_day": 452,
+    "city": {
+      "name": "My City",
+      "lon": -122.3314,
+      "lat": 47.606
+    },
+    "city_name": "My City",
+    "run": 1,
+    "net_worth": 142100000,
+    "cash": 6200000,
+    "bank_total": 18500000,
+    "liquid_cash": 24700000,
+    "income_24h": 1850000,
+    "shop_count": 4,
+    "land_count": 1200,
+    "loyalty_points": 210,
+    "worker_count": 420,
+    "vehicle_count": 85,
+    "network_coverage": 0.72,
+    "network_out_of_stock": 3,
+    "income_rent_income_per_min": 850,
+    "income_gross_per_min": 420,
+    "income_wage_per_min": 180,
+    "income_net_per_min": 1090
+  }
+]
